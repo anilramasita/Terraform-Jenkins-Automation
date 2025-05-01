@@ -1,36 +1,29 @@
-variable "aws_access_key" {
-  description = "AWS access key"
-  type        = string
-  default     = ""
-}
-
-variable "aws_secret_key" {
-  description = "AWS secret key"
-  type        = string
-  default     = ""
-}
-
 variable "aws_region" {
-  description = "AWS region"
-  type        = string
-  default     = "ap-south-1"
+  description = "The AWS region to create things in."
+  default     = "us-east-1"
 }
 
-
-variable "ami" {
-   type        = string
-   description = "Ubuntu AMI ID"
-   default     = "ami-0e35ddab05955cf57"
+variable "key_name" {
+  description = " SSH keys to connect to ec2 instance"
+  default     =  ""
 }
 
 variable "instance_type" {
-   type        = string
-   description = "Instance type"
-   default     = "t2.micro"
+  description = "instance type for ec2"
+  default     =  "t2.micro"
 }
 
-variable "name_tag" {
-   type        = string
-   description = "Name of the EC2 instance"
-   default     = "My EC2 Instance"
+variable "security_group" {
+  description = "Name of security group"
+  default     = ""
+}
+
+variable "tag_name" {
+  description = "Tag Name of for Ec2 instance"
+  default     = "my-ec2-instance"
+}
+
+variable "ami_id" {
+  description = "AMI for Ubuntu Ec2 instance"
+  default     = "ami-062f0cc54dbfd8ef1"
 }
